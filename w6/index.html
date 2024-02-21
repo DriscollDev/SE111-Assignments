@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    var hPay = Number(prompt("What is your hourly pay"))
+    var hWork = Number(prompt("How many hours do you work each week"))
+    var tRate = Number(prompt("What is the tax rate over 2 weeks"))
+    gross = hPay*hWork
+    tax = gross*(tRate/100)
+    tax = Math.round(tax*100)/100
+    net = gross - tax
+
+    console.log(`Gross Pay: $${gross}`)
+    console.log(`Uncle Sam's Share $${tax}`)
+    console.log(`Net Pay $${net}`)
+    alert(
+        `Gross Pay: $${gross}\n`+
+        `Uncle Sam's Share $${tax}\n`+
+        `Net Pay $${net}`
+    )
+
+    </script>
+</body>
+</html>
